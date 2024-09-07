@@ -1,0 +1,1408 @@
+
+<html>
+<head>
+    <title>Reporte de Descuentos - Quart - 2024-06-01 a 2024-08-31</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="text"] {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function searchTable() {
+            var inputs, filter, table, tr, td, i, j, txtValue, display;
+            inputs = document.getElementsByClassName("searchInput");
+            table = document.getElementById("discountTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 1; i < tr.length; i++) {
+                display = true;
+                for (var k = 0; k < inputs.length; k++) {
+                    filter = inputs[k].value.toUpperCase();
+                    td = tr[i].getElementsByTagName("td")[k];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) === -1) {
+                            display = false;
+                            break;
+                        }
+                    }
+                }
+                tr[i].style.display = display ? "" : "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Reporte de Descuentos - Quart - 2024-06-01 a 2024-08-31</h1>
+    <h2>Resumen de Descuentos</h2>
+    <p><strong>Venta Total:</strong> €83,261.62</p>
+    <p><strong>Importe de Descuento Aplicado:</strong> €265.48</p>
+    <p><strong>Porcentaje de Descuentos Aplicados Sobre La Venta:</strong> 0.32%</p>
+    <p><strong>Total de Tickets:</strong> 33,413</p>
+    <p><strong>Tickets con Descuento:</strong> 186</p>
+    
+    <h2>Productos con Descuento</h2>
+    <ul>
+        <li>3 FARTONS</li><li>3 MINIEMPANADAS</li><li>6 MINIEMPANADAS</li><li>AGUA GAS PET</li><li>AGUA PET</li><li>AGUA SIN GAS</li><li>BATIDO CHOCOLATE</li><li>BATIDO FRUTOS ROJOS</li><li>BATIDO GALLETA</li><li>BIZCOCHO PLATANO</li><li>BOCADILLO ATUN</li><li>BOCADILLO TORTILLA</li><li>BRETZEL CREMA</li><li>CAFE + TOSTA CLÁSICA</li><li>CAFE + TOSTA JAMON SERRANO</li><li>CAFE CON LECHE</li><li>CAFE CORTADO</li><li>CAFE FRAPPE</li><li>CAFE SOLO</li><li>CERVEZA</li><li>COCA COLA</li><li>COCA COLA ZERO</li><li>COLA CAO</li><li>CREPE DE CHOCOLATE</li><li>CROISSANT CHOCO</li><li>CROISSANT CURVO</li><li>CROISSANT MIXTO/BIKINI</li><li>CROISSANT RECTO</li><li>CUCURUCHO 1 BOLA</li><li>DESCAFEINADO SOLO</li><li>EMPANADA ARGENTINA</li><li>EMPANADA DE ATUN</li><li>EMPANADA TERNERA MECHADA</li><li>EMPANADILLA VEGANA CAPRESE</li><li>ENSAIMADA</li><li>ENSALADA QUESO DE CABRA</li><li>EXTRA AGUACATE</li><li>EXTRA CAFÉ</li><li>EXTRA HIELO</li><li>EXTRA PAVO</li><li>FOCACCIA BACON</li><li>FOCACCIA VERDURAS</li><li>FRAPPE MOKA</li><li>GOFRE</li><li>GOFRE + CAFE</li><li>GRANIZADO CAFE</li><li>GRANIZADO FRESA</li><li>GRANIZADO LIMON</li><li>GRANIZADO MANGO</li><li>HEINEKEN DOBLE</li><li>HOJALDRE DE BACON</li><li>HORCHATA</li><li>MINI EMPANADILLA PISTO</li><li>MINI PALMERITAS</li><li>MINICROISSANT</li><li>MUFFIN CHOCO</li><li>NAPOLITANA MIXTA</li><li>PACK 12 MINIPANARIAS</li><li>PACK 6 MINIPANARIAS</li><li>PIZZA YORK</li><li>SACRAMENTO</li><li>SMOOTHIE AÇAI</li><li>SMOOTHIE AÇAI Y FRUTOS DEL BOSQUE</li><li>SMOOTHIE GREEN BOOSTER</li><li>SMOOTHIE TROPICAL</li><li>TARRINA 1 BOLA</li><li>TARRINA 2 BOLAS</li><li>TARTA DE CHOCOLATE</li><li>TARTA DE QUESO</li><li>TERNERA MECHADA</li><li>TONICA</li><li>TOSTA CLASICA</li><li>TOSTA PAVO Y AGUACATE</li><li>TOSTA SERRANO</li><li>VASO LECHE</li><li>YUMMIE AMARILLA POLLO</li><li>YUMMIE ROJA LOMO</li><li>ZUMO CITRIC CARE</li><li>ZUMO DETOX</li><li>ZUMO NARANJA</li><li>ZUMO NARANJA PEQUEÑO</li><li>ZUMO ORANGE VELVET</li>
+    </ul>
+
+    <h2>Tickets por Porcentaje de Descuento</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Porcentaje de Descuento</th>
+      <th>Cantidad de Tickets</th>
+      <th>Total Descuento (€)</th>
+      <th>Importe Total Con Descuento (€)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>50.0</td>
+      <td>186</td>
+      <td>€265.48</td>
+      <td>€265.48</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2>Porcentaje de Descuento Aplicado por Ticket</h2>
+    <div>
+        <input type="text" class="searchInput" onkeyup="searchTable()" placeholder="Buscar por Hora...">
+        <input type="text" class="searchInput" onkeyup="searchTable()" placeholder="Buscar por Total Sin Descuento...">
+        <input type="text" class="searchInput" onkeyup="searchTable()" placeholder="Buscar por Total Con Descuento...">
+        <input type="text" class="searchInput" onkeyup="searchTable()" placeholder="Buscar por Porcentaje de Descuento...">
+        <input type="text" class="searchInput" onkeyup="searchTable()" placeholder="Buscar por Detalle Ticket...">
+    </div>
+    <table border="1" class="dataframe" id="discountTable">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Hora</th>
+      <th>Total Sin Descuento</th>
+      <th>Total Con Descuento</th>
+      <th>Porcentaje de Descuento</th>
+      <th>Detalle Ticket</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2024-06-01 09:09:50</td>
+      <td>€4.80</td>
+      <td>€2.40</td>
+      <td>50.0</td>
+      <td>6 MINIEMPANADAS</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 09:09:55</td>
+      <td>€1.90</td>
+      <td>€0.95</td>
+      <td>50.0</td>
+      <td>EMPANADA DE ATUN</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 09:10:00</td>
+      <td>€1.90</td>
+      <td>€0.95</td>
+      <td>50.0</td>
+      <td>EMPANADA DE ATUN</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 09:10:01</td>
+      <td>€3.80</td>
+      <td>€1.90</td>
+      <td>50.0</td>
+      <td>EMPANADA DE ATUN, EMPANADA DE ATUN</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 10:14:44</td>
+      <td>€8.00</td>
+      <td>€4.00</td>
+      <td>50.0</td>
+      <td>FOCACCIA BACON, FOCACCIA BACON</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 10:14:45</td>
+      <td>€4.00</td>
+      <td>€2.00</td>
+      <td>50.0</td>
+      <td>FOCACCIA VERDURAS</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 10:14:52</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>ZUMO DETOX</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 10:14:56</td>
+      <td>€1.40</td>
+      <td>€0.70</td>
+      <td>50.0</td>
+      <td>CAFE SOLO</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 10:14:59</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>ZUMO DETOX</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 10:15:02</td>
+      <td>€1.70</td>
+      <td>€0.85</td>
+      <td>50.0</td>
+      <td>CAFE CON LECHE</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 10:15:15</td>
+      <td>€1.40</td>
+      <td>€0.70</td>
+      <td>50.0</td>
+      <td>CAFE SOLO</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 10:15:24</td>
+      <td>€1.00</td>
+      <td>€0.50</td>
+      <td>50.0</td>
+      <td>EXTRA CAFÉ</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 10:15:29</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>SMOOTHIE TROPICAL</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 10:15:44</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>TOSTA PAVO Y AGUACATE</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 10:15:47</td>
+      <td>€3.40</td>
+      <td>€1.70</td>
+      <td>50.0</td>
+      <td>CAFE CON LECHE, CAFE CON LECHE</td>
+    </tr>
+    <tr>
+      <td>2024-06-01 16:44:17</td>
+      <td>€1.70</td>
+      <td>€0.85</td>
+      <td>50.0</td>
+      <td>CAFE CON LECHE</td>
+    </tr>
+    <tr>
+      <td>2024-06-04 11:37:10</td>
+      <td>€2.50</td>
+      <td>€1.25</td>
+      <td>50.0</td>
+      <td>CAFE + TOSTA CLÁSICA</td>
+    </tr>
+    <tr>
+      <td>2024-06-04 11:37:19</td>
+      <td>€1.65</td>
+      <td>€0.83</td>
+      <td>50.0</td>
+      <td>AGUA SIN GAS</td>
+    </tr>
+    <tr>
+      <td>2024-06-04 13:09:10</td>
+      <td>€2.70</td>
+      <td>€1.35</td>
+      <td>50.0</td>
+      <td>EMPANADILLA VEGANA CAPRESE</td>
+    </tr>
+    <tr>
+      <td>2024-06-04 13:09:36</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>SMOOTHIE AÇAI</td>
+    </tr>
+    <tr>
+      <td>2024-06-04 16:13:40</td>
+      <td>€7.10</td>
+      <td>€3.55</td>
+      <td>50.0</td>
+      <td>ENSALADA QUESO DE CABRA</td>
+    </tr>
+    <tr>
+      <td>2024-06-04 16:13:47</td>
+      <td>€5.30</td>
+      <td>€2.65</td>
+      <td>50.0</td>
+      <td>BOCADILLO ATUN</td>
+    </tr>
+    <tr>
+      <td>2024-06-05 10:37:11</td>
+      <td>€3.60</td>
+      <td>€1.80</td>
+      <td>50.0</td>
+      <td>CROISSANT CURVO, CROISSANT CURVO</td>
+    </tr>
+    <tr>
+      <td>2024-06-05 14:22:23</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>BIZCOCHO PLATANO</td>
+    </tr>
+    <tr>
+      <td>2024-06-05 15:43:47</td>
+      <td>€1.70</td>
+      <td>€0.85</td>
+      <td>50.0</td>
+      <td>CAFE CON LECHE</td>
+    </tr>
+    <tr>
+      <td>2024-06-05 15:43:49</td>
+      <td>€2.70</td>
+      <td>€1.35</td>
+      <td>50.0</td>
+      <td>EMPANADILLA VEGANA CAPRESE</td>
+    </tr>
+    <tr>
+      <td>2024-06-05 16:05:31</td>
+      <td>€2.30</td>
+      <td>€1.15</td>
+      <td>50.0</td>
+      <td>COCA COLA</td>
+    </tr>
+    <tr>
+      <td>2024-06-06 15:02:53</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>YUMMIE ROJA LOMO</td>
+    </tr>
+    <tr>
+      <td>2024-06-06 15:02:54</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>YUMMIE ROJA LOMO</td>
+    </tr>
+    <tr>
+      <td>2024-06-06 15:02:55</td>
+      <td>€5.70</td>
+      <td>€2.85</td>
+      <td>50.0</td>
+      <td>EMPANADA ARGENTINA, EMPANADA ARGENTINA, EMPANADA ARGENTINA</td>
+    </tr>
+    <tr>
+      <td>2024-06-06 15:03:07</td>
+      <td>€2.25</td>
+      <td>€1.13</td>
+      <td>50.0</td>
+      <td>3 FARTONS</td>
+    </tr>
+    <tr>
+      <td>2024-06-06 15:03:29</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>CROISSANT RECTO, CROISSANT RECTO, CROISSANT RECTO</td>
+    </tr>
+    <tr>
+      <td>2024-06-06 15:03:37</td>
+      <td>€7.50</td>
+      <td>€3.75</td>
+      <td>50.0</td>
+      <td>PACK 12 MINIPANARIAS</td>
+    </tr>
+    <tr>
+      <td>2024-06-06 16:50:44</td>
+      <td>€3.15</td>
+      <td>€1.58</td>
+      <td>50.0</td>
+      <td>COLA CAO, CAFE SOLO</td>
+    </tr>
+    <tr>
+      <td>2024-06-07 10:36:10</td>
+      <td>€1.70</td>
+      <td>€0.85</td>
+      <td>50.0</td>
+      <td>CAFE CON LECHE</td>
+    </tr>
+    <tr>
+      <td>2024-06-07 10:36:26</td>
+      <td>€3.50</td>
+      <td>€1.75</td>
+      <td>50.0</td>
+      <td>TOSTA SERRANO</td>
+    </tr>
+    <tr>
+      <td>2024-06-07 17:40:42</td>
+      <td>€2.30</td>
+      <td>€1.15</td>
+      <td>50.0</td>
+      <td>COCA COLA</td>
+    </tr>
+    <tr>
+      <td>2024-06-07 17:41:05</td>
+      <td>€2.70</td>
+      <td>€1.35</td>
+      <td>50.0</td>
+      <td>EMPANADILLA VEGANA CAPRESE</td>
+    </tr>
+    <tr>
+      <td>2024-06-08 15:05:16</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>ZUMO CITRIC CARE</td>
+    </tr>
+    <tr>
+      <td>2024-06-09 10:05:20</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>ZUMO DETOX</td>
+    </tr>
+    <tr>
+      <td>2024-06-09 15:53:21</td>
+      <td>€1.70</td>
+      <td>€0.85</td>
+      <td>50.0</td>
+      <td>CAFE CON LECHE</td>
+    </tr>
+    <tr>
+      <td>2024-06-09 15:53:34</td>
+      <td>€4.25</td>
+      <td>€2.13</td>
+      <td>50.0</td>
+      <td>FRAPPE MOKA</td>
+    </tr>
+    <tr>
+      <td>2024-06-10 09:42:13</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>CROISSANT MIXTO/BIKINI</td>
+    </tr>
+    <tr>
+      <td>2024-06-10 09:42:37</td>
+      <td>€1.50</td>
+      <td>€0.75</td>
+      <td>50.0</td>
+      <td>AGUA PET</td>
+    </tr>
+    <tr>
+      <td>2024-06-10 09:42:42</td>
+      <td>€1.40</td>
+      <td>€0.70</td>
+      <td>50.0</td>
+      <td>DESCAFEINADO SOLO</td>
+    </tr>
+    <tr>
+      <td>2024-06-10 09:42:47</td>
+      <td>€3.20</td>
+      <td>€1.60</td>
+      <td>50.0</td>
+      <td>ZUMO NARANJA</td>
+    </tr>
+    <tr>
+      <td>2024-06-10 09:43:19</td>
+      <td>€1.95</td>
+      <td>€0.98</td>
+      <td>50.0</td>
+      <td>TOSTA CLASICA</td>
+    </tr>
+    <tr>
+      <td>2024-06-10 09:43:36</td>
+      <td>€0.80</td>
+      <td>€0.40</td>
+      <td>50.0</td>
+      <td>EXTRA PAVO</td>
+    </tr>
+    <tr>
+      <td>2024-06-10 09:43:42</td>
+      <td>€1.55</td>
+      <td>€0.78</td>
+      <td>50.0</td>
+      <td>CAFE CORTADO</td>
+    </tr>
+    <tr>
+      <td>2024-06-10 09:43:47</td>
+      <td>€1.00</td>
+      <td>€0.50</td>
+      <td>50.0</td>
+      <td>EXTRA CAFÉ</td>
+    </tr>
+    <tr>
+      <td>2024-06-10 16:40:21</td>
+      <td>€4.25</td>
+      <td>€2.13</td>
+      <td>50.0</td>
+      <td>CAFE FRAPPE</td>
+    </tr>
+    <tr>
+      <td>2024-06-10 16:40:30</td>
+      <td>€2.70</td>
+      <td>€1.35</td>
+      <td>50.0</td>
+      <td>HEINEKEN DOBLE</td>
+    </tr>
+    <tr>
+      <td>2024-06-11 17:49:46</td>
+      <td>€3.50</td>
+      <td>€1.75</td>
+      <td>50.0</td>
+      <td>HORCHATA</td>
+    </tr>
+    <tr>
+      <td>2024-06-11 17:49:50</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>GRANIZADO LIMON</td>
+    </tr>
+    <tr>
+      <td>2024-06-11 17:49:56</td>
+      <td>€3.50</td>
+      <td>€1.75</td>
+      <td>50.0</td>
+      <td>HORCHATA</td>
+    </tr>
+    <tr>
+      <td>2024-06-11 17:50:00</td>
+      <td>€1.55</td>
+      <td>€0.78</td>
+      <td>50.0</td>
+      <td>CAFE CORTADO</td>
+    </tr>
+    <tr>
+      <td>2024-06-11 17:50:12</td>
+      <td>€1.50</td>
+      <td>€0.75</td>
+      <td>50.0</td>
+      <td>AGUA PET</td>
+    </tr>
+    <tr>
+      <td>2024-06-12 08:52:35</td>
+      <td>€1.20</td>
+      <td>€0.60</td>
+      <td>50.0</td>
+      <td>SACRAMENTO</td>
+    </tr>
+    <tr>
+      <td>2024-06-12 10:03:56</td>
+      <td>€5.30</td>
+      <td>€2.65</td>
+      <td>50.0</td>
+      <td>BOCADILLO TORTILLA</td>
+    </tr>
+    <tr>
+      <td>2024-06-12 10:04:04</td>
+      <td>€2.70</td>
+      <td>€1.35</td>
+      <td>50.0</td>
+      <td>EMPANADILLA VEGANA CAPRESE</td>
+    </tr>
+    <tr>
+      <td>2024-06-12 10:04:11</td>
+      <td>€4.00</td>
+      <td>€2.00</td>
+      <td>50.0</td>
+      <td>FOCACCIA VERDURAS</td>
+    </tr>
+    <tr>
+      <td>2024-06-12 10:04:27</td>
+      <td>€4.95</td>
+      <td>€2.48</td>
+      <td>50.0</td>
+      <td>SMOOTHIE AÇAI Y FRUTOS DEL BOSQUE</td>
+    </tr>
+    <tr>
+      <td>2024-06-12 10:04:30</td>
+      <td>€1.55</td>
+      <td>€0.78</td>
+      <td>50.0</td>
+      <td>CAFE CORTADO</td>
+    </tr>
+    <tr>
+      <td>2024-06-12 10:06:39</td>
+      <td>€5.40</td>
+      <td>€2.70</td>
+      <td>50.0</td>
+      <td>EMPANADILLA VEGANA CAPRESE, EMPANADILLA VEGANA CAPRESE</td>
+    </tr>
+    <tr>
+      <td>2024-06-12 10:06:43</td>
+      <td>€1.70</td>
+      <td>€0.85</td>
+      <td>50.0</td>
+      <td>CAFE CON LECHE</td>
+    </tr>
+    <tr>
+      <td>2024-06-15 16:02:14</td>
+      <td>€3.50</td>
+      <td>€1.75</td>
+      <td>50.0</td>
+      <td>TARTA DE QUESO</td>
+    </tr>
+    <tr>
+      <td>2024-06-15 16:02:16</td>
+      <td>€2.30</td>
+      <td>€1.15</td>
+      <td>50.0</td>
+      <td>COCA COLA</td>
+    </tr>
+    <tr>
+      <td>2024-06-15 17:54:06</td>
+      <td>€1.90</td>
+      <td>€0.95</td>
+      <td>50.0</td>
+      <td>EMPANADA DE ATUN</td>
+    </tr>
+    <tr>
+      <td>2024-06-19 16:25:28</td>
+      <td>€2.30</td>
+      <td>€1.15</td>
+      <td>50.0</td>
+      <td>COCA COLA</td>
+    </tr>
+    <tr>
+      <td>2024-06-19 19:22:04</td>
+      <td>€4.40</td>
+      <td>€2.20</td>
+      <td>50.0</td>
+      <td>GOFRE + CAFE</td>
+    </tr>
+    <tr>
+      <td>2024-06-21 11:53:01</td>
+      <td>€1.80</td>
+      <td>€0.90</td>
+      <td>50.0</td>
+      <td>HOJALDRE DE BACON</td>
+    </tr>
+    <tr>
+      <td>2024-06-24 08:05:26</td>
+      <td>€1.70</td>
+      <td>€0.85</td>
+      <td>50.0</td>
+      <td>CAFE CON LECHE</td>
+    </tr>
+    <tr>
+      <td>2024-06-24 08:05:28</td>
+      <td>€2.10</td>
+      <td>€1.05</td>
+      <td>50.0</td>
+      <td>NAPOLITANA MIXTA</td>
+    </tr>
+    <tr>
+      <td>2024-06-24 08:05:37</td>
+      <td>€1.90</td>
+      <td>€0.95</td>
+      <td>50.0</td>
+      <td>EMPANADA ARGENTINA</td>
+    </tr>
+    <tr>
+      <td>2024-06-24 08:20:34</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>YUMMIE ROJA LOMO</td>
+    </tr>
+    <tr>
+      <td>2024-06-24 08:21:00</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>YUMMIE AMARILLA POLLO</td>
+    </tr>
+    <tr>
+      <td>2024-06-24 08:21:35</td>
+      <td>€1.80</td>
+      <td>€0.90</td>
+      <td>50.0</td>
+      <td>HOJALDRE DE BACON</td>
+    </tr>
+    <tr>
+      <td>2024-06-24 08:21:49</td>
+      <td>€1.70</td>
+      <td>€0.85</td>
+      <td>50.0</td>
+      <td>CAFE CON LECHE</td>
+    </tr>
+    <tr>
+      <td>2024-06-24 08:22:05</td>
+      <td>€1.70</td>
+      <td>€0.85</td>
+      <td>50.0</td>
+      <td>CAFE CON LECHE</td>
+    </tr>
+    <tr>
+      <td>2024-06-24 08:47:12</td>
+      <td>€9.60</td>
+      <td>€4.80</td>
+      <td>50.0</td>
+      <td>ZUMO NARANJA</td>
+    </tr>
+    <tr>
+      <td>2024-06-25 14:58:46</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>YUMMIE AMARILLA POLLO</td>
+    </tr>
+    <tr>
+      <td>2024-06-26 12:03:19</td>
+      <td>€2.70</td>
+      <td>€1.35</td>
+      <td>50.0</td>
+      <td>EMPANADILLA VEGANA CAPRESE</td>
+    </tr>
+    <tr>
+      <td>2024-06-26 12:03:24</td>
+      <td>€1.40</td>
+      <td>€0.70</td>
+      <td>50.0</td>
+      <td>CAFE SOLO</td>
+    </tr>
+    <tr>
+      <td>2024-06-26 13:04:44</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>GRANIZADO FRESA</td>
+    </tr>
+    <tr>
+      <td>2024-06-26 13:04:45</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>GRANIZADO FRESA</td>
+    </tr>
+    <tr>
+      <td>2024-06-26 13:06:50</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>YUMMIE ROJA LOMO</td>
+    </tr>
+    <tr>
+      <td>2024-06-26 13:07:02</td>
+      <td>€2.40</td>
+      <td>€1.20</td>
+      <td>50.0</td>
+      <td>3 MINIEMPANADAS</td>
+    </tr>
+    <tr>
+      <td>2024-06-26 14:42:13</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>BIZCOCHO PLATANO</td>
+    </tr>
+    <tr>
+      <td>2024-06-27 07:25:02</td>
+      <td>€2.80</td>
+      <td>€1.40</td>
+      <td>50.0</td>
+      <td>CAFE SOLO</td>
+    </tr>
+    <tr>
+      <td>2024-06-27 07:25:04</td>
+      <td>€1.50</td>
+      <td>€0.75</td>
+      <td>50.0</td>
+      <td>AGUA PET</td>
+    </tr>
+    <tr>
+      <td>2024-06-27 07:33:20</td>
+      <td>€1.65</td>
+      <td>€0.83</td>
+      <td>50.0</td>
+      <td>AGUA GAS PET</td>
+    </tr>
+    <tr>
+      <td>2024-06-27 07:34:03</td>
+      <td>€2.80</td>
+      <td>€1.40</td>
+      <td>50.0</td>
+      <td>CAFE SOLO, CAFE SOLO</td>
+    </tr>
+    <tr>
+      <td>2024-06-27 07:43:05</td>
+      <td>€-1.40</td>
+      <td>€-0.70</td>
+      <td>50.0</td>
+      <td>CAFE SOLO</td>
+    </tr>
+    <tr>
+      <td>2024-06-27 07:43:07</td>
+      <td>€-1.40</td>
+      <td>€-0.70</td>
+      <td>50.0</td>
+      <td>CAFE SOLO</td>
+    </tr>
+    <tr>
+      <td>2024-06-27 07:43:11</td>
+      <td>€-1.50</td>
+      <td>€-0.75</td>
+      <td>50.0</td>
+      <td>AGUA PET</td>
+    </tr>
+    <tr>
+      <td>2024-06-27 12:32:26</td>
+      <td>€4.20</td>
+      <td>€2.10</td>
+      <td>50.0</td>
+      <td>PACK 6 MINIPANARIAS</td>
+    </tr>
+    <tr>
+      <td>2024-06-27 17:34:55</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>SMOOTHIE GREEN BOOSTER</td>
+    </tr>
+    <tr>
+      <td>2024-06-27 17:35:03</td>
+      <td>€1.40</td>
+      <td>€0.70</td>
+      <td>50.0</td>
+      <td>VASO LECHE</td>
+    </tr>
+    <tr>
+      <td>2024-06-29 10:07:27</td>
+      <td>€2.30</td>
+      <td>€1.15</td>
+      <td>50.0</td>
+      <td>COCA COLA</td>
+    </tr>
+    <tr>
+      <td>2024-07-05 10:51:10</td>
+      <td>€1.20</td>
+      <td>€0.60</td>
+      <td>50.0</td>
+      <td>SACRAMENTO</td>
+    </tr>
+    <tr>
+      <td>2024-07-06 11:18:02</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>BATIDO CHOCOLATE</td>
+    </tr>
+    <tr>
+      <td>2024-07-06 11:18:11</td>
+      <td>€3.50</td>
+      <td>€1.75</td>
+      <td>50.0</td>
+      <td>TARTA DE CHOCOLATE</td>
+    </tr>
+    <tr>
+      <td>2024-07-06 11:19:58</td>
+      <td>€3.50</td>
+      <td>€1.75</td>
+      <td>50.0</td>
+      <td>TARTA DE QUESO</td>
+    </tr>
+    <tr>
+      <td>2024-07-06 11:20:02</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>ZUMO DETOX</td>
+    </tr>
+    <tr>
+      <td>2024-07-06 11:29:55</td>
+      <td>€3.50</td>
+      <td>€1.75</td>
+      <td>50.0</td>
+      <td>TARTA DE QUESO</td>
+    </tr>
+    <tr>
+      <td>2024-07-06 12:07:56</td>
+      <td>€1.50</td>
+      <td>€0.75</td>
+      <td>50.0</td>
+      <td>AGUA PET</td>
+    </tr>
+    <tr>
+      <td>2024-07-06 12:08:08</td>
+      <td>€1.40</td>
+      <td>€0.70</td>
+      <td>50.0</td>
+      <td>VASO LECHE</td>
+    </tr>
+    <tr>
+      <td>2024-07-06 12:08:26</td>
+      <td>€2.70</td>
+      <td>€1.35</td>
+      <td>50.0</td>
+      <td>EMPANADILLA VEGANA CAPRESE</td>
+    </tr>
+    <tr>
+      <td>2024-07-06 12:08:32</td>
+      <td>€1.50</td>
+      <td>€0.75</td>
+      <td>50.0</td>
+      <td>CROISSANT RECTO</td>
+    </tr>
+    <tr>
+      <td>2024-07-06 12:14:10</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>ZUMO DETOX</td>
+    </tr>
+    <tr>
+      <td>2024-07-07 12:41:43</td>
+      <td>€4.60</td>
+      <td>€2.30</td>
+      <td>50.0</td>
+      <td>CERVEZA, CERVEZA</td>
+    </tr>
+    <tr>
+      <td>2024-07-07 12:41:45</td>
+      <td>€1.85</td>
+      <td>€0.93</td>
+      <td>50.0</td>
+      <td>TONICA</td>
+    </tr>
+    <tr>
+      <td>2024-07-07 12:41:48</td>
+      <td>€0.85</td>
+      <td>€0.43</td>
+      <td>50.0</td>
+      <td>MINI EMPANADILLA PISTO</td>
+    </tr>
+    <tr>
+      <td>2024-07-09 18:27:02</td>
+      <td>€1.50</td>
+      <td>€0.75</td>
+      <td>50.0</td>
+      <td>AGUA PET</td>
+    </tr>
+    <tr>
+      <td>2024-07-09 18:27:07</td>
+      <td>€1.75</td>
+      <td>€0.88</td>
+      <td>50.0</td>
+      <td>COLA CAO</td>
+    </tr>
+    <tr>
+      <td>2024-07-09 18:29:10</td>
+      <td>€3.50</td>
+      <td>€1.75</td>
+      <td>50.0</td>
+      <td>GOFRE</td>
+    </tr>
+    <tr>
+      <td>2024-07-11 12:43:01</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>TOSTA PAVO Y AGUACATE</td>
+    </tr>
+    <tr>
+      <td>2024-07-11 12:43:07</td>
+      <td>€1.50</td>
+      <td>€0.75</td>
+      <td>50.0</td>
+      <td>AGUA PET</td>
+    </tr>
+    <tr>
+      <td>2024-07-13 10:03:21</td>
+      <td>€2.70</td>
+      <td>€1.35</td>
+      <td>50.0</td>
+      <td>EMPANADILLA VEGANA CAPRESE</td>
+    </tr>
+    <tr>
+      <td>2024-07-13 11:09:31</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>CROISSANT MIXTO/BIKINI</td>
+    </tr>
+    <tr>
+      <td>2024-07-13 20:16:56</td>
+      <td>€3.50</td>
+      <td>€1.75</td>
+      <td>50.0</td>
+      <td>HORCHATA</td>
+    </tr>
+    <tr>
+      <td>2024-07-13 20:17:27</td>
+      <td>€2.55</td>
+      <td>€1.28</td>
+      <td>50.0</td>
+      <td>BRETZEL CREMA</td>
+    </tr>
+    <tr>
+      <td>2024-07-18 10:48:39</td>
+      <td>€1.40</td>
+      <td>€0.70</td>
+      <td>50.0</td>
+      <td>CAFE SOLO</td>
+    </tr>
+    <tr>
+      <td>2024-07-18 11:15:30</td>
+      <td>€1.40</td>
+      <td>€0.70</td>
+      <td>50.0</td>
+      <td>CAFE SOLO</td>
+    </tr>
+    <tr>
+      <td>2024-07-18 11:16:01</td>
+      <td>€1.40</td>
+      <td>€0.70</td>
+      <td>50.0</td>
+      <td>CAFE SOLO</td>
+    </tr>
+    <tr>
+      <td>2024-07-18 11:16:04</td>
+      <td>€1.55</td>
+      <td>€0.78</td>
+      <td>50.0</td>
+      <td>CAFE CORTADO</td>
+    </tr>
+    <tr>
+      <td>2024-07-22 11:51:32</td>
+      <td>€1.50</td>
+      <td>€0.75</td>
+      <td>50.0</td>
+      <td>AGUA PET</td>
+    </tr>
+    <tr>
+      <td>2024-07-22 18:17:00</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>BIZCOCHO PLATANO</td>
+    </tr>
+    <tr>
+      <td>2024-07-23 14:52:02</td>
+      <td>€2.30</td>
+      <td>€1.15</td>
+      <td>50.0</td>
+      <td>COCA COLA</td>
+    </tr>
+    <tr>
+      <td>2024-07-23 19:55:40</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>GRANIZADO MANGO</td>
+    </tr>
+    <tr>
+      <td>2024-07-25 13:37:18</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>BATIDO FRUTOS ROJOS</td>
+    </tr>
+    <tr>
+      <td>2024-07-25 13:37:34</td>
+      <td>€3.50</td>
+      <td>€1.75</td>
+      <td>50.0</td>
+      <td>CREPE DE CHOCOLATE</td>
+    </tr>
+    <tr>
+      <td>2024-07-25 13:54:40</td>
+      <td>€1.90</td>
+      <td>€0.95</td>
+      <td>50.0</td>
+      <td>EMPANADA DE ATUN</td>
+    </tr>
+    <tr>
+      <td>2024-07-26 19:10:56</td>
+      <td>€2.75</td>
+      <td>€1.38</td>
+      <td>50.0</td>
+      <td>TARRINA 1 BOLA</td>
+    </tr>
+    <tr>
+      <td>2024-07-26 19:11:04</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>SMOOTHIE GREEN BOOSTER</td>
+    </tr>
+    <tr>
+      <td>2024-07-28 17:53:10</td>
+      <td>€0.80</td>
+      <td>€0.40</td>
+      <td>50.0</td>
+      <td>MINI PALMERITAS</td>
+    </tr>
+    <tr>
+      <td>2024-07-29 12:15:39</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>ZUMO DETOX</td>
+    </tr>
+    <tr>
+      <td>2024-07-29 12:15:46</td>
+      <td>€2.75</td>
+      <td>€1.38</td>
+      <td>50.0</td>
+      <td>CUCURUCHO 1 BOLA</td>
+    </tr>
+    <tr>
+      <td>2024-07-29 17:20:28</td>
+      <td>€2.75</td>
+      <td>€1.38</td>
+      <td>50.0</td>
+      <td>TARRINA 1 BOLA</td>
+    </tr>
+    <tr>
+      <td>2024-07-29 17:47:56</td>
+      <td>€3.75</td>
+      <td>€1.88</td>
+      <td>50.0</td>
+      <td>TARRINA 2 BOLAS</td>
+    </tr>
+    <tr>
+      <td>2024-07-30 11:46:27</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>BIZCOCHO PLATANO</td>
+    </tr>
+    <tr>
+      <td>2024-08-01 16:29:28</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>GRANIZADO CAFE</td>
+    </tr>
+    <tr>
+      <td>2024-08-03 12:58:19</td>
+      <td>€1.50</td>
+      <td>€0.75</td>
+      <td>50.0</td>
+      <td>ENSAIMADA</td>
+    </tr>
+    <tr>
+      <td>2024-08-03 21:34:51</td>
+      <td>€4.60</td>
+      <td>€2.30</td>
+      <td>50.0</td>
+      <td>CERVEZA, CERVEZA</td>
+    </tr>
+    <tr>
+      <td>2024-08-07 12:55:33</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>GRANIZADO FRESA</td>
+    </tr>
+    <tr>
+      <td>2024-08-08 11:00:35</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>YUMMIE AMARILLA POLLO</td>
+    </tr>
+    <tr>
+      <td>2024-08-08 11:00:36</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>TERNERA MECHADA</td>
+    </tr>
+    <tr>
+      <td>2024-08-08 11:00:40</td>
+      <td>€3.20</td>
+      <td>€1.60</td>
+      <td>50.0</td>
+      <td>ZUMO NARANJA</td>
+    </tr>
+    <tr>
+      <td>2024-08-08 11:24:46</td>
+      <td>€2.50</td>
+      <td>€1.25</td>
+      <td>50.0</td>
+      <td>CAFE + TOSTA CLÁSICA</td>
+    </tr>
+    <tr>
+      <td>2024-08-08 19:16:14</td>
+      <td>€4.00</td>
+      <td>€2.00</td>
+      <td>50.0</td>
+      <td>ZUMO NARANJA PEQUEÑO</td>
+    </tr>
+    <tr>
+      <td>2024-08-08 19:16:25</td>
+      <td>€2.30</td>
+      <td>€1.15</td>
+      <td>50.0</td>
+      <td>COCA COLA ZERO</td>
+    </tr>
+    <tr>
+      <td>2024-08-10 13:47:18</td>
+      <td>€2.70</td>
+      <td>€1.35</td>
+      <td>50.0</td>
+      <td>HEINEKEN DOBLE</td>
+    </tr>
+    <tr>
+      <td>2024-08-11 19:20:07</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>GRANIZADO FRESA</td>
+    </tr>
+    <tr>
+      <td>2024-08-11 20:29:25</td>
+      <td>€2.75</td>
+      <td>€1.38</td>
+      <td>50.0</td>
+      <td>TARRINA 1 BOLA</td>
+    </tr>
+    <tr>
+      <td>2024-08-14 11:44:40</td>
+      <td>€1.80</td>
+      <td>€0.90</td>
+      <td>50.0</td>
+      <td>CROISSANT CHOCO</td>
+    </tr>
+    <tr>
+      <td>2024-08-14 13:44:22</td>
+      <td>€1.20</td>
+      <td>€0.60</td>
+      <td>50.0</td>
+      <td>SACRAMENTO</td>
+    </tr>
+    <tr>
+      <td>2024-08-14 13:44:31</td>
+      <td>€4.00</td>
+      <td>€2.00</td>
+      <td>50.0</td>
+      <td>PIZZA YORK</td>
+    </tr>
+    <tr>
+      <td>2024-08-14 13:44:36</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>YUMMIE ROJA LOMO</td>
+    </tr>
+    <tr>
+      <td>2024-08-14 13:44:41</td>
+      <td>€1.60</td>
+      <td>€0.80</td>
+      <td>50.0</td>
+      <td>MINICROISSANT</td>
+    </tr>
+    <tr>
+      <td>2024-08-14 13:44:52</td>
+      <td>€4.00</td>
+      <td>€2.00</td>
+      <td>50.0</td>
+      <td>PIZZA YORK</td>
+    </tr>
+    <tr>
+      <td>2024-08-14 13:58:01</td>
+      <td>€4.60</td>
+      <td>€2.30</td>
+      <td>50.0</td>
+      <td>COCA COLA, COCA COLA</td>
+    </tr>
+    <tr>
+      <td>2024-08-15 14:04:19</td>
+      <td>€4.60</td>
+      <td>€2.30</td>
+      <td>50.0</td>
+      <td>COCA COLA</td>
+    </tr>
+    <tr>
+      <td>2024-08-15 17:53:34</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>ZUMO DETOX</td>
+    </tr>
+    <tr>
+      <td>2024-08-16 12:59:07</td>
+      <td>€1.70</td>
+      <td>€0.85</td>
+      <td>50.0</td>
+      <td>CAFE CON LECHE</td>
+    </tr>
+    <tr>
+      <td>2024-08-16 12:59:24</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>TOSTA PAVO Y AGUACATE</td>
+    </tr>
+    <tr>
+      <td>2024-08-17 15:54:42</td>
+      <td>€1.70</td>
+      <td>€0.85</td>
+      <td>50.0</td>
+      <td>CAFE CON LECHE</td>
+    </tr>
+    <tr>
+      <td>2024-08-17 15:54:45</td>
+      <td>€0.30</td>
+      <td>€0.15</td>
+      <td>50.0</td>
+      <td>EXTRA HIELO</td>
+    </tr>
+    <tr>
+      <td>2024-08-18 12:25:28</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>CROISSANT MIXTO/BIKINI</td>
+    </tr>
+    <tr>
+      <td>2024-08-18 12:25:34</td>
+      <td>€2.70</td>
+      <td>€1.35</td>
+      <td>50.0</td>
+      <td>EMPANADILLA VEGANA CAPRESE</td>
+    </tr>
+    <tr>
+      <td>2024-08-18 13:10:57</td>
+      <td>€2.30</td>
+      <td>€1.15</td>
+      <td>50.0</td>
+      <td>COCA COLA</td>
+    </tr>
+    <tr>
+      <td>2024-08-20 11:41:44</td>
+      <td>€1.80</td>
+      <td>€0.90</td>
+      <td>50.0</td>
+      <td>CROISSANT CURVO</td>
+    </tr>
+    <tr>
+      <td>2024-08-20 11:41:51</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>ZUMO ORANGE VELVET</td>
+    </tr>
+    <tr>
+      <td>2024-08-20 18:58:44</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>BATIDO GALLETA</td>
+    </tr>
+    <tr>
+      <td>2024-08-20 18:58:49</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>GRANIZADO FRESA</td>
+    </tr>
+    <tr>
+      <td>2024-08-20 18:58:53</td>
+      <td>€3.50</td>
+      <td>€1.75</td>
+      <td>50.0</td>
+      <td>TARTA DE QUESO</td>
+    </tr>
+    <tr>
+      <td>2024-08-20 19:07:03</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>GRANIZADO FRESA</td>
+    </tr>
+    <tr>
+      <td>2024-08-20 19:07:13</td>
+      <td>€0.85</td>
+      <td>€0.43</td>
+      <td>50.0</td>
+      <td>MINI EMPANADILLA PISTO</td>
+    </tr>
+    <tr>
+      <td>2024-08-21 12:55:19</td>
+      <td>€5.40</td>
+      <td>€2.70</td>
+      <td>50.0</td>
+      <td>EMPANADA TERNERA MECHADA, EMPANADA TERNERA MECHADA</td>
+    </tr>
+    <tr>
+      <td>2024-08-21 12:55:28</td>
+      <td>€3.80</td>
+      <td>€1.90</td>
+      <td>50.0</td>
+      <td>EMPANADA ARGENTINA, EMPANADA ARGENTINA</td>
+    </tr>
+    <tr>
+      <td>2024-08-21 12:55:36</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>GRANIZADO FRESA</td>
+    </tr>
+    <tr>
+      <td>2024-08-22 12:46:37</td>
+      <td>€4.20</td>
+      <td>€2.10</td>
+      <td>50.0</td>
+      <td>CAFE + TOSTA JAMON SERRANO</td>
+    </tr>
+    <tr>
+      <td>2024-08-22 12:46:59</td>
+      <td>€1.70</td>
+      <td>€0.85</td>
+      <td>50.0</td>
+      <td>EXTRA AGUACATE</td>
+    </tr>
+    <tr>
+      <td>2024-08-25 13:43:09</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>GRANIZADO LIMON</td>
+    </tr>
+    <tr>
+      <td>2024-08-28 10:57:53</td>
+      <td>€2.70</td>
+      <td>€1.35</td>
+      <td>50.0</td>
+      <td>MUFFIN CHOCO</td>
+    </tr>
+    <tr>
+      <td>2024-08-28 13:12:18</td>
+      <td>€1.40</td>
+      <td>€0.70</td>
+      <td>50.0</td>
+      <td>CAFE SOLO</td>
+    </tr>
+    <tr>
+      <td>2024-08-31 20:27:56</td>
+      <td>€2.30</td>
+      <td>€1.15</td>
+      <td>50.0</td>
+      <td>COCA COLA</td>
+    </tr>
+  </tbody>
+</table>
+
+    
+</body>
+</html>

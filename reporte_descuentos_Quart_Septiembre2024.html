@@ -1,0 +1,176 @@
+
+<html>
+<head>
+    <title>Reporte de Descuentos - Quart - 2024-09-01 a 2024-09-06</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="text"] {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function searchTable() {
+            var inputs, filter, table, tr, td, i, j, txtValue, display;
+            inputs = document.getElementsByClassName("searchInput");
+            table = document.getElementById("discountTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 1; i < tr.length; i++) {
+                display = true;
+                for (var k = 0; k < inputs.length; k++) {
+                    filter = inputs[k].value.toUpperCase();
+                    td = tr[i].getElementsByTagName("td")[k];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) === -1) {
+                            display = false;
+                            break;
+                        }
+                    }
+                }
+                tr[i].style.display = display ? "" : "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Reporte de Descuentos - Quart - 2024-09-01 a 2024-09-06</h1>
+    <h2>Resumen de Descuentos</h2>
+    <p><strong>Venta Total:</strong> €4,126.93</p>
+    <p><strong>Importe de Descuento Aplicado:</strong> €14.43</p>
+    <p><strong>Porcentaje de Descuentos Aplicados Sobre La Venta:</strong> 0.35%</p>
+    <p><strong>Total de Tickets:</strong> 1,760</p>
+    <p><strong>Tickets con Descuento:</strong> 10</p>
+    
+    <h2>Productos con Descuento</h2>
+    <ul>
+        <li>BIZCOCHO PLATANO</li><li>COCA COLA</li><li>EMPANADA TERNERA MECHADA</li><li>GRANIZADO AZUL</li><li>GRANIZADO LIMON</li><li>TERNERA MECHADA</li><li>TOSTA CLASICA</li><li>YUMMIE ROJA LOMO</li><li>ZUMO DETOX</li>
+    </ul>
+
+    <h2>Tickets por Porcentaje de Descuento</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Porcentaje de Descuento</th>
+      <th>Cantidad de Tickets</th>
+      <th>Total Descuento (€)</th>
+      <th>Importe Total Con Descuento (€)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>50.0</td>
+      <td>10</td>
+      <td>€14.43</td>
+      <td>€14.43</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2>Porcentaje de Descuento Aplicado por Ticket</h2>
+    <div>
+        <input type="text" class="searchInput" onkeyup="searchTable()" placeholder="Buscar por Hora...">
+        <input type="text" class="searchInput" onkeyup="searchTable()" placeholder="Buscar por Total Sin Descuento...">
+        <input type="text" class="searchInput" onkeyup="searchTable()" placeholder="Buscar por Total Con Descuento...">
+        <input type="text" class="searchInput" onkeyup="searchTable()" placeholder="Buscar por Porcentaje de Descuento...">
+        <input type="text" class="searchInput" onkeyup="searchTable()" placeholder="Buscar por Detalle Ticket...">
+    </div>
+    <table border="1" class="dataframe" id="discountTable">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Hora</th>
+      <th>Total Sin Descuento</th>
+      <th>Total Con Descuento</th>
+      <th>Porcentaje de Descuento</th>
+      <th>Detalle Ticket</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2024-09-01 17:10:16</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>GRANIZADO LIMON</td>
+    </tr>
+    <tr>
+      <td>2024-09-01 17:10:20</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>GRANIZADO AZUL</td>
+    </tr>
+    <tr>
+      <td>2024-09-01 17:13:26</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>BIZCOCHO PLATANO</td>
+    </tr>
+    <tr>
+      <td>2024-09-01 17:13:33</td>
+      <td>€4.50</td>
+      <td>€2.25</td>
+      <td>50.0</td>
+      <td>ZUMO DETOX</td>
+    </tr>
+    <tr>
+      <td>2024-09-01 17:51:34</td>
+      <td>€2.95</td>
+      <td>€1.48</td>
+      <td>50.0</td>
+      <td>GRANIZADO LIMON</td>
+    </tr>
+    <tr>
+      <td>2024-09-03 11:48:56</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>TERNERA MECHADA</td>
+    </tr>
+    <tr>
+      <td>2024-09-03 17:05:42</td>
+      <td>€1.95</td>
+      <td>€0.98</td>
+      <td>50.0</td>
+      <td>TOSTA CLASICA</td>
+    </tr>
+    <tr>
+      <td>2024-09-04 13:50:34</td>
+      <td>€2.85</td>
+      <td>€1.43</td>
+      <td>50.0</td>
+      <td>YUMMIE ROJA LOMO</td>
+    </tr>
+    <tr>
+      <td>2024-09-04 14:42:28</td>
+      <td>€2.30</td>
+      <td>€1.15</td>
+      <td>50.0</td>
+      <td>COCA COLA</td>
+    </tr>
+    <tr>
+      <td>2024-09-05 11:47:05</td>
+      <td>€2.70</td>
+      <td>€1.35</td>
+      <td>50.0</td>
+      <td>EMPANADA TERNERA MECHADA</td>
+    </tr>
+  </tbody>
+</table>
+
+    
+</body>
+</html>
